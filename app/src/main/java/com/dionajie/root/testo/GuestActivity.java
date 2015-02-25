@@ -38,6 +38,9 @@ public class GuestActivity extends Activity {
     @ViewById
     TextView name;
 
+    @ViewById
+    FrameLayout imageViewLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +52,7 @@ public class GuestActivity extends Activity {
 
         listTitleFragment = new ListTitleFragment_();
         FragmentTransaction fs = getFragmentManager().beginTransaction();
-        //fs.add(R.id.imageViewLayout,listTitleFragment).commit();
+        fs.add(R.id.imageViewLayout,listTitleFragment).commit();
         getTracksData();
     }
 

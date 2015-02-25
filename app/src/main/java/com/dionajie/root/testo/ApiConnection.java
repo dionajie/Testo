@@ -61,6 +61,7 @@ public class ApiConnection {
                     .build();
         }catch (IOException e){
             Log.i("ApiConnection",e.getMessage());
+
         }
 
     }

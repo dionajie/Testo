@@ -21,8 +21,7 @@ public class ListTitleFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1,stringList);
+        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,stringList);
         setListAdapter(adapter);
     }
 
