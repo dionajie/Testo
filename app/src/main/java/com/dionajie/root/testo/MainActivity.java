@@ -22,6 +22,8 @@ import org.androidannotations.annotations.res.ColorStateListRes;
 public class MainActivity extends ActionBarActivity {
     private static final String PREFS = "prefs";
     private static final String PREFS_NAME = "nama";
+    private static final String PREFS_EVENT = "event";
+    private static final String PREFS_GUEST = "guest";
 
     SharedPreferences mSharePreferences;
 
@@ -43,6 +45,8 @@ public class MainActivity extends ActionBarActivity {
 
         SharedPreferences.Editor e = mSharePreferences.edit();
         e.putString(PREFS_NAME, inputname);
+        e.putString(PREFS_EVENT, null);
+        e.putString(PREFS_GUEST, null);
         e.commit();
 
         startActivity(MenuAct);

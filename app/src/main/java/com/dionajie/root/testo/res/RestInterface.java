@@ -1,4 +1,4 @@
-package com.dionajie.root.testo;
+package com.dionajie.root.testo.res;
 
 import com.dionajie.root.testo.Model.Guest;
 

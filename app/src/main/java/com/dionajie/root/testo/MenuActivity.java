@@ -56,15 +56,6 @@ public class MenuActivity extends ActionBarActivity {
         if(nama.length() > 0) {
             tvWelcome.setText("Nama : " + nama + ".");
         }
-/*
-        Intent in = getIntent();
-        String tombolEvent;
-        String tombolGuest;
-
-        tombolEvent = in.getStringExtra("tombolEvent");
-        tombolGuest = in.getStringExtra("tombolGuest");
-*/
-
 
         if(eventx.length() > 0) {
             btnEvent.setText(eventx);

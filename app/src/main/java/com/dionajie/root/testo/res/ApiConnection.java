@@ -1,4 +1,4 @@
-package com.dionajie.root.testo;
+package com.dionajie.root.testo.res;
 
 import android.content.Context;
 import android.net.http.HttpResponseCache;
