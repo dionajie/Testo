@@ -22,6 +22,7 @@ import org.androidannotations.annotations.res.ColorStateListRes;
 public class MainActivity extends ActionBarActivity {
     private static final String PREFS = "prefs";
     private static final String PREFS_NAME = "nama";
+
     SharedPreferences mSharePreferences;
 
     @ViewById
@@ -34,7 +35,6 @@ public class MainActivity extends ActionBarActivity {
     void Next() {
 
         Intent MenuAct = new Intent(this,MenuActivity_.class);
-        MenuAct.putExtra("tombolEvent", "Pilih Event");
 
         mSharePreferences = getSharedPreferences(PREFS, MODE_PRIVATE);
 

@@ -36,29 +36,46 @@ public class MenuActivity extends ActionBarActivity {
 
     private static final String PREFS = "prefs";
     private static final String PREFS_NAME = "nama";
+    private static final String PREFS_EVENT = "event";
+    private static final String PREFS_GUEST = "guest";
     SharedPreferences mSharePreferences;
 
 
 
     @AfterViews
     void tampilnama(){
-         Intent in = getIntent();
-        String tombolEvent = in.getStringExtra("tombolEvent");
 
-        btnEvent.setText(tombolEvent);
+
         mSharePreferences = getSharedPreferences(PREFS, MODE_PRIVATE);
-
-        // Read the user's name,
-        // or an empty string if nothing found
         String nama = mSharePreferences.getString(PREFS_NAME, "");
+        String eventx = mSharePreferences.getString(PREFS_EVENT, "");
+        String guestx = mSharePreferences.getString(PREFS_GUEST, "");
+
+
 
         if(nama.length() > 0) {
             tvWelcome.setText("Nama : " + nama + ".");
         }
-           // Intent in = getIntent();
-           // String nama = in.getStringExtra("nama");
+/*
+        Intent in = getIntent();
+        String tombolEvent;
+        String tombolGuest;
 
-           // tvWelcome.setText("Nama : " + nama + ".");
+        tombolEvent = in.getStringExtra("tombolEvent");
+        tombolGuest = in.getStringExtra("tombolGuest");
+*/
+
+
+        if(eventx.length() > 0) {
+            btnEvent.setText(eventx);
+        }
+
+        if(guestx.length() > 0) {
+            btnGuest.setText(guestx);
+        }
+
+
+
 
     }
 

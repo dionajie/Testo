@@ -3,6 +3,7 @@ package com.dionajie.root.testo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
@@ -27,6 +28,10 @@ import java.util.ArrayList;
 
 public class EventActivity extends Activity {
 
+    private static final String PREFS = "prefs";
+    private static final String PREFS_EVENT = "event";
+    SharedPreferences mSharePreferences;
+
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +50,12 @@ public class EventActivity extends Activity {
                 Toast.makeText(EventActivity.this, mEvent.getEvent(), Toast.LENGTH_LONG).show();
 
                 Intent Back = new Intent(getBaseContext(), MenuActivity_.class);
-                Back.putExtra("tombolEvent",mEvent.getEvent());
+                //Back.putExtra("tombolEvent",mEvent.getEvent());
+                mSharePreferences = getSharedPreferences(PREFS, MODE_PRIVATE);
+
+                SharedPreferences.Editor e = mSharePreferences.edit();
+                e.putString(PREFS_EVENT, mEvent.getEvent());
+                e.commit();
                 startActivity(Back);
 
 
